@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uma Mbatangu</title>
+    <style>	
+    body {
+        margin: 0;
+        overflow: hidden;
+        background-image: url(data:image/png;base64,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), linear-gradient(#fff 0%, #fff 25%, #c8d0da 50%, #6a7f9a 75%, #434e5b 100%);
+        font-family: Arial, sans-serif;
+    }
+    .controls-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 10px;
+        z-index: 100;
+    }
+    #exterior-light-controls, 
+    #interior-light-controls, 
+    #view-controls {
+        background: rgba(255,255,255,0.8);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        width: 180px;
+    }
+    h3 {
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .slider-container {
+        margin-bottom: 8px;
+    }
+    .slider-container label {
+        display: block;
+        margin-bottom: 3px;
+    }
+    input[type="range"], input[type="color"], button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    /* Additional style to emphasize the bold headers */
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="controls-container">
+        <!-- Existing Exterior Light Controls -->
+        <div id="exterior-light-controls">
+            <h3>Exterior Light</h3>
+            <div class="slider-container">
+                <label>Intensity: <span id="exteriorIntensityValue">5.0</span></label>
+                <input type="range" id="exteriorLightIntensitySlider" min="0" max="20" step="0.1" value="5">
+            </div>
+            <div class="slider-container">
+                <label>X: <span id="exteriorXValue">10</span></label>
+                <input type="range" id="exteriorLightXSlider" min="-50" max="50" step="1" value="10">
+            </div>
+            <div class="slider-container">
+                <label>Y: <span id="exteriorYValue">20</span></label>
+                <input type="range" id="exteriorLightYSlider" min="-50" max="50" step="1" value="20">
+            </div>
+            <div class="slider-container">
+                <label>Z: <span id="exteriorZValue">10</span></label>
+                <input type="range" id="exteriorLightZSlider" min="-50" max="50" step="1" value="10">
+            </div>
+        </div>
+
+        <!-- Existing Interior Light Controls -->
+        <div id="interior-light-controls">
+            <h3>Interior Light</h3>
+            <div class="slider-container">
+                <label>Intensity: <span id="interiorIntensityValue">3</span></label>
+                <input type="range" id="interiorLightIntensitySlider" min="0" max="10" step="0.1" value="3">
+            </div>
+            <div class="slider-container">
+                <label>Color</label>
+                <input type="color" id="interiorLightColorPicker" value="#ffffff">
+            </div>
+        </div>
+
+        <!-- Combined Texture and Camera Controls -->
+        <div id="view-controls">
+            <h3>TEXTURE AND CAMERA</h3>
+            <div class="slider-container">
+                <button id="toggleTextureButton">Toggle Texture</button>
+            </div>
+            <div class="slider-container">
+                <button id="toggleCameraViewButton">Switch to Interior</button>
+            </div>
+        </div>
+    </div>
+    <canvas id="myCanvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="OrbitControls.js"></script>
+
+    <script>
+      //Scene
+      var scene = new THREE.Scene();
+
+      //Camera
+      var height = window.innerHeight;
+      var width = window.innerWidth;
+      var distance = 1000;
+      var diag = Math.sqrt((height*height)+(width*width))
+      var fov = 2 * Math.atan((diag) / (2 * distance)) * (180 / Math.PI); //Field of View
+      var camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, distance);
+      camera.position.set(0, 10, 20);
+
+      //Canvas
+      var myCanvas = document.getElementById('myCanvas');
+
+      var renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        canvas: myCanvas,
+        alpha: true
+      });
+
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      document.body.appendChild(renderer.domElement);
+
+      //LIGHTS
+      // Exterior Directional Light
+      var exteriorLight = new THREE.DirectionalLight(0xffffff, 3);
+      exteriorLight.position.set(10, 20, 10);
+      exteriorLight.castShadow = true;
+
+      // Shadow properties for exterior light
+      exteriorLight.shadow.mapSize.width = 1024;
+      exteriorLight.shadow.mapSize.height = 1024;
+      exteriorLight.shadow.camera.near = 0.1;
+      exteriorLight.shadow.camera.far = 100;
+      exteriorLight.shadow.camera.left = -30;
+      exteriorLight.shadow.camera.right = 30;
+      exteriorLight.shadow.camera.top = 30;
+      exteriorLight.shadow.camera.bottom = -30;
+
+      scene.add(exteriorLight);
+
+      // Ambient Light for overall scene illumination
+      var ambientLight = new THREE.AmbientLight(0xffffff, 1);
+      scene.add(ambientLight);
+
+      // Interior Point Lights (multiple to simulate room lighting)
+      var interiorLights = [];
+      var interiorLightPositions = [
+          { x: 0, y: 10, z: 0 },    // Center of the room
+          { x: -5, y: 10, z: 5 },   // Left side of the room
+          { x: 5, y: 10, z: 5 }     // Right side of the room
+      ];
+
+      interiorLightPositions.forEach(function(pos) {
+          var pointLight = new THREE.PointLight(0xffffff, 1.5, 20);
+          pointLight.position.set(pos.x, pos.y, pos.z);
+          scene.add(pointLight);
+          interiorLights.push(pointLight);
+      });
+
+      //OrbitControls
+      var orbit = new THREE.OrbitControls(camera, renderer.domElement);
+      orbit.maxPolarAngle = Math.PI / 2;
+      orbit.update();
+
+      // Load GLTF model and set shadows
+      var mesh;
+      var loader = new THREE.GLTFLoader();
+      var currentModelPath = 'umam.glb'; // Default model
+
+      function loadModel(modelPath) {
+          // Remove existing mesh if it exists
+          if (mesh) {
+              scene.remove(mesh);
+          }
+
+          loader.load(modelPath, function (gltf) {
+              mesh = gltf.scene;
+              mesh.rotation.x = Math.PI;
+
+              // Enable shadow casting and receiving for all child objects in the model
+              mesh.traverse(function (node) {
+                  if (node.isMesh) {
+                      node.castShadow = true;
+                      node.receiveShadow = true;
+                  }
+              });
+
+              scene.add(mesh);
+              currentModelPath = modelPath;
+          });
+      }
+
+      // Initial model load
+      loadModel(currentModelPath);
+
+      // Texture Toggle Button
+      document.getElementById('toggleTextureButton').addEventListener('click', function() {
+          if (currentModelPath === 'umam.glb') {
+              loadModel('umamnotext.glb');
+          } else {
+              loadModel('umam.glb');
+          }
+      });
+
+      // Exterior Light Control Event Listeners
+      document.getElementById('exteriorLightIntensitySlider').addEventListener('input', function(e) {
+          var intensity = parseFloat(e.target.value);
+          exteriorLight.intensity = intensity;
+          document.getElementById('exteriorIntensityValue').textContent =intensity.toFixed(1);
+      });
+
+      document.getElementById('exteriorLightXSlider').addEventListener('input', function(e) {
+          var xPos = parseFloat(e.target.value);
+          exteriorLight.position.x = xPos;
+          document.getElementById('exteriorXValue').textContent = xPos;
+      });
+
+      document.getElementById('exteriorLightYSlider').addEventListener('input', function(e) {
+          var yPos = parseFloat(e.target.value);
+          exteriorLight.position.y = yPos;
+          document.getElementById('exteriorYValue').textContent = yPos;
+      });
+
+      document.getElementById('exteriorLightZSlider').addEventListener('input', function(e) {
+          var zPos = parseFloat(e.target.value);
+          exteriorLight.position.z = zPos;
+          document.getElementById('exteriorZValue').textContent = zPos;
+      });
+
+      // Interior Light Control Event Listeners
+      document.getElementById('interiorLightIntensitySlider').addEventListener('input', function(e) {
+          var intensity = parseFloat(e.target.value);
+          interiorLights.forEach(function(light) {
+              light.intensity = intensity;
+          });
+          document.getElementById('interiorIntensityValue').textContent = intensity.toFixed(1);
+      });
+
+      document.getElementById('interiorLightColorPicker').addEventListener('input', function(e) {
+          var color = new THREE.Color(e.target.value);
+          interiorLights.forEach(function(light) {
+              light.color = color;
+          });
+      });
+
+      // Camera View Toggle
+      const exteriorCameraPosition = new THREE.Vector3(0, 10, 20);
+      const interiorCameraPosition = new THREE.Vector3(0, 1.5, -7); // Adjusted for interior view
+      let isExteriorView = true;
+
+      document.getElementById('toggleCameraViewButton').addEventListener('click', function() {
+          const button = this;
+          
+          if (isExteriorView) {
+              // Switch to interior view
+              camera.position.copy(interiorCameraPosition);
+              button.textContent = 'Switch to Exterior';
+              isExteriorView = false;
+          } else {
+              // Switch to exterior view
+              camera.position.copy(exteriorCameraPosition);
+              button.textContent = 'Switch to Interior';
+              isExteriorView = true;
+          }
+          
+          // Update orbit controls
+          orbit.target.copy(scene.position);
+          camera.lookAt(scene.position);
+          orbit.update();
+      });
+
+      //Render loop
+      render();
+
+      function render() {
+          renderer.toneMappingExposure = Math.pow(0.7, 5.0);
+          renderer.render(scene, camera);
+          requestAnimationFrame(render);
+      }
+
+      // Responsive handling
+      window.addEventListener('resize', function() {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+    </script>
+  </body>
+</html>
